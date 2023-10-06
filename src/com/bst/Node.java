@@ -16,10 +16,6 @@ public class Node {
         return chave;
     }
 
-    public void setChave(int chave) {
-        this.chave = chave;
-    }
-
     public Node getLeft() {
         return left;
     }

@@ -3,9 +3,9 @@ import com.bst.Node;
 
 public class Main{
     public static void main(String[] args){
-        // System.out.println("Teste");
         Tree t = new Tree();
         t.insert(8);
+        t.insert(3);
         t.insert(3);
         t.insert(1);
         t.insert(6);

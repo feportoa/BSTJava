@@ -8,14 +8,6 @@ public class Tree {
         this.root = null;
     }
 
-    public Node getNode() {
-        return node;
-    }
-
-    public void setNode(Node node) {
-        this.node = node;
-    }
-
     public Node getRoot(){
         return this.root;
     }
@@ -32,17 +24,17 @@ public class Tree {
             Node curr_node = this.root; // Arvore começa pelo root
 
             while(true){
-                if(curr_node != null){ // Se achar um node vazio...
+                if(curr_node != null){
                     System.out.println(curr_node.getChave());
                     // Coloca o node anterior como o node "atual" (logo o node atual vai mudar)
                     parent_node = curr_node; // Parent node usado no else
                     if(node.getChave() < curr_node.getChave()) { curr_node = curr_node.getLeft(); }
                     else if(node.getChave() > curr_node.getChave()) { curr_node = curr_node.getRight(); }
-                    else { System.out.println("Valor já existe: " + node.getChave()); }
-                } else {
+                    else { System.out.println("Valor já existe: " + node.getChave()); break;}
+                } else { // Se achar um node vazio...
                     if(node.getChave() < parent_node.getChave()) { parent_node.setLeft(node); }
                     else if(node.getChave() > parent_node.getChave()) { parent_node.setRight(node); }
-                    else { System.out.println("Valor já existe: " + node.getChave()); }
+                    else { System.out.println("Valor já existe: " + node.getChave()); break;}
                     break;
                 }
             }
